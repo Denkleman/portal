@@ -1,0 +1,15 @@
+{% extends 'mysocial/base.html' %}
+
+{% block head %}
+<title>Выход из аккаунта</title>
+{% endblock %}
+
+
+{% block content %}
+<div class="logoutt">
+    <h2>Вы вышли из аккаунта!</h2>
+    <div>
+            <a class="rll" href="{% url 'login' %}">sign in</a>
+    </div>
+</div>
+{% endblock %}

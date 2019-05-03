@@ -1,0 +1,42 @@
+
+<html>
+    <head>
+        {% block head %}
+        <title>Base</title>
+        {% endblock %}
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/styl.css' %}">
+    </head>
+    <body>
+   
+       
+
+    
+
+    
+       
+
+        <div class="content">
+            {% if messages %}
+            {% for message in messages %}
+                  <div class="alert alert-{{ message.tags }}">
+                    {{ message }}
+                  </div>
+            {% endfor %}
+          {% endif %}
+            
+            {% block content %}
+            {% endblock %}
+        </div>
+        
+
+      <footer>
+        <div class="footerp">
+           <p>footer</p>
+        </div>
+    </footer>
+    
+</body>
+</html>
